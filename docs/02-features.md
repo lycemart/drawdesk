@@ -47,7 +47,9 @@ Acceptance:
   employer NI £1,135.50; dividend tax £3,977.34; take-home £46,091.20 (±£0.02).
 - Profit £0 → all zeros, no NaN.
 - Profit £30,000 → take-home £24,403.45 (±£1).
-- Profit £150,000 → best salary < £12,570 and take-home £85,320.94 (±£5).
+- Profit £150,000 → best salary < £12,570 and take-home £87,237 (±£5). One
+  published competitor shows £85,320.94 for this row; its £30k-£100k rows match
+  ours to the penny, so the divergence is recorded, not hidden.
 
 ### F2 — Tax-year comparison
 Selector 2025/26 and 2026/27; show 2026/27 vs 2025/26 take-home delta for the

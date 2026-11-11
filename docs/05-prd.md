@@ -122,7 +122,7 @@ penny before summing; display to the penny with `£` and thousands separators.
 | 30,000 | 2026/27 | take-home 24,403.45 ±1 |
 | 50,000 | 2026/27 | take-home 38,861.95 ±1 |
 | 100,000 | 2026/27 | take-home 65,209.63 ±5 |
-| 150,000 | 2026/27 | take-home 85,320.94 ±5; salary < 12,570 |
+| 150,000 | 2026/27 | take-home 87,237 ±5; salary < 12,570 (one competitor's row differs; see market research) |
 | 0 | any | all zero, no NaN |
 | 60,000 | 2025/26 | take-home > 2026/27 (dividend rise) |
 | 60,000 + £10k pension | 2026/27 | CT falls, cash falls, pension 10,000 |

@@ -410,8 +410,13 @@ export default function Planner() {
                 than taking it all at once
               </p>
             ) : (
-              <p className="savings">No saving at this profit level</p>
+              <div className="callout">
+                This pot already fits inside one year&apos;s basic-rate band, so
+                spreading it over {scenario.horizon} years adds nothing. Increase
+                the profit to see a saving.
+              </div>
             )}
+            {plan.totalTakeHome > plan.extractAllTakeHome ? (
             <div className="scroll">
               <table className="wide">
                 <thead>
@@ -453,6 +458,7 @@ export default function Planner() {
                 </tbody>
               </table>
             </div>
+            ) : null}
             <div className="callout">
               All at once: <strong>{formatGBP(plan.extractAllTakeHome, 0)}</strong>{" "}
               in your pocket. Spread over {scenario.horizon} years:{" "}
