@@ -36,8 +36,16 @@ export default function MethodologyPage() {
 
       <h2>Rates used for 2026/27</h2>
       <p>
-        Last reviewed <strong>{cfg.verifiedOn}</strong>. Source links are at the
-        bottom of this page and each rate below maps to one of them.
+        Last reviewed{" "}
+        <strong>
+          {new Date(cfg.verifiedOn).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </strong>
+        . Source links are at the bottom of this page and each rate below maps to
+        one of them.
       </p>
       <table>
         <thead>
@@ -77,14 +85,14 @@ export default function MethodologyPage() {
             <td className="num">{P(TAX_YEARS["2025/26"].dividendAllowance)}</td>
             <td className="num">{P(cfg.dividendAllowance)}</td>
           </tr>
-          {TAX_YEAR_ORDER.map((year) => (
-            <tr key={`div-${year}`}>
-              <td>Dividend rates, basic / higher / additional ({year})</td>
-              <td className="num" colSpan={2}>
-                {(TAX_YEARS[year].dividendRates.basic * 100).toFixed(2)}% /{" "}
-                {(TAX_YEARS[year].dividendRates.higher * 100).toFixed(2)}% /{" "}
-                {(TAX_YEARS[year].dividendRates.additional * 100).toFixed(2)}%
-              </td>
+          {(["basic", "higher", "additional"] as const).map((band) => (
+            <tr key={`div-${band}`}>
+              <td>Dividend rate, {band}</td>
+              {TAX_YEAR_ORDER.map((year) => (
+                <td className="num" key={`${band}-${year}`}>
+                  {(TAX_YEARS[year].dividendRates[band] * 100).toFixed(2)}%
+                </td>
+              ))}
             </tr>
           ))}
           <tr>
