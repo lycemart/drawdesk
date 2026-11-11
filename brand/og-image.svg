@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="DrawDesk — director pay planner">
+  <rect width="1200" height="630" fill="#F7F4ED"/>
+  <rect x="48" y="48" width="1104" height="534" rx="28" fill="none" stroke="#DED8CB" stroke-width="2"/>
+  <g transform="translate(96,96) scale(2.1)">
+    <rect x="0" y="0" width="44" height="44" rx="11" fill="none" stroke="#0E5F52" stroke-width="5"/>
+    <path d="M22 0h8.2A9.8 9.8 0 0 1 40 9.8V18H22z" fill="#C97B2E"/>
+  </g>
+  <text x="96" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" fill="#17201C" letter-spacing="-1.5">What should you draw</text>
+  <text x="96" y="386" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" fill="#0E5F52" letter-spacing="-1.5">from your company?</text>
+  <text x="96" y="460" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" fill="#5B6B64">Salary, dividend and pension planner — 2026/27</text>
+  <text x="96" y="536" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="600" fill="#17201C">drawdesk.co.uk</text>
+</svg>

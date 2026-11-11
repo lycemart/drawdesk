@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="64" viewBox="0 0 260 64" role="img" aria-label="DrawDesk">
+  <g>
+    <rect x="6" y="10" width="44" height="44" rx="11" fill="none" stroke="#0E5F52" stroke-width="5"/>
+    <path d="M28 10h8.2A9.8 9.8 0 0 1 46 19.8V28H28z" fill="#C97B2E"/>
+  </g>
+  <text x="64" y="43" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="-0.6" fill="#17201C">Draw<tspan fill="#0E5F52">Desk</tspan></text>
+</svg>

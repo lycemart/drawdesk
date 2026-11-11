@@ -1,0 +1,25 @@
+# DrawDesk
+
+> A free planner for UK limited company directors. It finds the salary, dividend
+> and employer pension mix that leaves the most take-home pay for a given company
+> profit, for 2025/26 and 2026/27, and models spreading a one-off pot over
+> several tax years.
+
+## Key facts
+- One director, England, Wales and Northern Ireland; 2025/26 and 2026/27.
+- 2026/27 dividend rates: 10.75% basic, 35.75% higher, 39.35% additional; £500 allowance.
+- Employer National Insurance: 15% above £5,000. No Employment Allowance for a single director.
+- Corporation Tax: 19% up to £50,000, 25% above £250,000, marginal relief between.
+- Worked example: £60,000 profit, 2026/27 -> £12,570 salary, £37,498.54 dividends, £46,091.20 take-home.
+- Not tax advice. Rates last reviewed 11 November 2026.
+
+## Pages
+- https://lycemart.github.io/drawdesk/ — planner
+- https://lycemart.github.io/drawdesk/methodology/ — rates, formulas, sources, assumptions
+
+## Sources
+- https://www.gov.uk/tax-on-dividends
+- https://www.gov.uk/income-tax-rates
+- https://www.gov.uk/national-insurance-rates-letters
+- https://www.gov.uk/corporation-tax-rates
+- https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027

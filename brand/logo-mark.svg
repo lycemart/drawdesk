@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="DrawDesk mark">
+  <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M12 2h3.6A4.4 4.4 0 0 1 20 6.4V12h-8z" fill="currentColor"/>
+</svg>
