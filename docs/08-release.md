@@ -11,7 +11,7 @@ assumptions:
   - "GitHub account lycemart owns the repo; Pages uses the workflow build type."
 ---
 
-# Release — DrawDesk v1.0.0
+# Release — DrawDesk v1.0.1
 
 ## Live
 - URL: https://lycemart.github.io/drawdesk/
@@ -54,9 +54,13 @@ repos/lycemart/drawdesk/pages -X POST -f build_type=workflow` was used once.
 | Missing path `/nope/` | 404 with the custom page |
 | Mobile 390 px | `scrollWidth = 390`, no horizontal overflow |
 
-## Tag
-`v1.0.0` on the commit that passed CI + Pages + the live smoke test (see the
-release page). Tags are never moved; a fix gets `v1.0.1`.
+## Tags
+- `v1.0.0` — first public release, on the commit that passed CI + Pages + the
+  live smoke test.
+- `v1.0.1` — methodology polish (human-readable review date, one row per
+  dividend band); same engine, same behaviour.
+
+Tags are never moved; a fix gets a new patch tag.
 
 ## Rollback
 1. Pages keeps deployments; re-run the previous green `pages` workflow from
