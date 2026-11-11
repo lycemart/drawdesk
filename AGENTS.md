@@ -1,5 +1,10 @@
 # Working notes — DrawDesk
 
+## GitHub account
+Use **lycemart** only. `intercitygastro` is a client account (Shahzad) — never
+read, push, merge, tag or run Actions there. Check `gh api user --jq .login`
+before any repo operation.
+
 ## Non-negotiables
 - One area per change. Calculation changes touch `lib/engine.ts` + tests only.
 - Every rate lives in `lib/tax-config.ts` with a source URL and `verifiedOn`;
