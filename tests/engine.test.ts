@@ -143,3 +143,25 @@ describe("marginal routes", () => {
     }
   });
 });
+
+describe("salary presentation", () => {
+  it("is never worse than the standard £12,570 salary", () => {
+    for (const profit of [40_000, 60_000, 100_000, 140_000, 180_000, 200_000]) {
+      const { best } = optimiseSalary(P(profit), 0, "2026/27");
+      const standard = compute(P(profit), P(12_570), 0, "2026/27");
+      expect(best.takeHome).toBeGreaterThanOrEqual(standard.takeHome - 100);
+    }
+  });
+
+  it("keeps the £60,000 reference salary exactly", () => {
+    const { best } = optimiseSalary(P(60_000), 0, "2026/27");
+    expect(best.salary).toBe(P(12_570));
+  });
+
+  it("is deterministic", () => {
+    const a = optimiseSalary(P(140_000), 0, "2026/27").best;
+    const b = optimiseSalary(P(140_000), 0, "2026/27").best;
+    expect(a.salary).toBe(b.salary);
+    expect(a.takeHome).toBe(b.takeHome);
+  });
+});

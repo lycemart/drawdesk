@@ -78,6 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div className="footer-links">
             <a href={withBase("/methodology/")}>Methodology and sources</a>
+            <a href={withBase("/take-home/")}>Take-home by profit</a>
             <a href="#faq">FAQ</a>
             <p>© 2026 DrawDesk</p>
           </div>

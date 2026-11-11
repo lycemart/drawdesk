@@ -14,8 +14,9 @@
 - Not tax advice. Rates last reviewed 11 November 2026.
 
 ## Pages
-- https://lycemart.github.io/drawdesk/ — planner
-- https://lycemart.github.io/drawdesk/methodology/ — rates, formulas, sources, assumptions
+- https://drawdesk.76-13-181-161.sslip.io/ — planner
+- https://drawdesk.76-13-181-161.sslip.io/take-home/ — best salary and take-home by profit, 2025/26 vs 2026/27
+- https://drawdesk.76-13-181-161.sslip.io/methodology/ — rates, formulas, sources, assumptions
 
 ## Sources
 - https://www.gov.uk/tax-on-dividends

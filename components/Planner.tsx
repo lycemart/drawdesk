@@ -349,6 +349,50 @@ export default function Planner() {
           </div>
         </section>
 
+        <section className="card" aria-labelledby="years-title">
+          <h3 id="years-title">2026/27 vs 2025/26</h3>
+          <p className="card-sub">
+            The same profit and assumptions in both years, so you can see the
+            cost of the April 2026 dividend rise.
+          </p>
+          <div className="scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Tax year</th>
+                  <th scope="col" className="num">
+                    Best salary
+                  </th>
+                  <th scope="col" className="num">
+                    Take-home
+                  </th>
+                  <th scope="col" className="num">
+                    Total tax
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { label: "2025/26", data: years.previous },
+                  { label: "2026/27", data: years.current },
+                ].map((row) => (
+                  <tr key={row.label}>
+                    <td>{row.label}</td>
+                    <td className="num">{formatGBP(row.data.salary, 0)}</td>
+                    <td className="num">{formatGBP(row.data.takeHome, 0)}</td>
+                    <td className="num">{formatGBP(row.data.totalTax, 0)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="note">
+            {years.deltaTakeHome < 0
+              ? `${formatGBP(Math.abs(years.deltaTakeHome), 0)} less in 2026/27 at this profit.`
+              : `${formatGBP(years.deltaTakeHome, 0)} more in 2026/27 at this profit.`}
+          </p>
+        </section>
+
         <section className="card" aria-labelledby="marginal-title">
           <h3 id="marginal-title">The next £1,000</h3>
           <p className="card-sub">

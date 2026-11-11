@@ -244,7 +244,7 @@ export function optimiseSalary(
   let best = compute(safeProfit, 0, pension, year);
   let bestSalary = 0;
 
-  const coarse = 5_000;
+  const coarse = 1_000; // £10: fine enough to catch the personal-allowance spike
   for (let s = 0; s <= maxSalary; s += coarse) {
     const b = compute(safeProfit, s, pension, year);
     if (b.takeHome > best.takeHome) {
@@ -260,6 +260,29 @@ export function optimiseSalary(
     if (b.takeHome > best.takeHome) {
       best = b;
       bestSalary = b.salary;
+    }
+  }
+
+  // Near-ties are common because the tax function is piecewise linear. Within
+  // £1 we prefer a salary a director would recognise, so the result is stable
+  // and explainable instead of an arbitrary penny-level winner.
+  const standardSalaries = [0, 500_000, 670_800, 1_257_000].filter(
+    (s) => s <= maxSalary
+  );
+  if (!standardSalaries.includes(bestSalary)) {
+    let snap: { best: Breakdown; salary: number } | null = null;
+    for (const s of standardSalaries) {
+      const b = compute(safeProfit, s, pension, year);
+      if (
+        b.takeHome >= best.takeHome - 100 &&
+        (!snap || b.takeHome > snap.best.takeHome)
+      ) {
+        snap = { best: b, salary: s };
+      }
+    }
+    if (snap) {
+      best = snap.best;
+      bestSalary = snap.salary;
     }
   }
 

@@ -4,7 +4,7 @@ A free planner for UK limited company directors. Enter company profit; it finds
 the salary, dividend and employer pension mix that leaves the most take-home,
 then models spreading a one-off pot over up to five tax years.
 
-Live: https://lycemart.github.io/drawdesk/
+Live: https://drawdesk.76-13-181-161.sslip.io/ (own server, nginx + TLS). Mirror: https://lycemart.github.io/drawdesk/
 
 ## Why
 The April 2026 dividend tax rise broke the "£12,570 salary, rest as dividends"
@@ -19,14 +19,14 @@ analytics, no secrets.
 ## Commands
 ```bash
 pnpm install
-pnpm test          # 18 engine tests
+pnpm test          # 30 engine and URL-state tests
 pnpm typecheck
 NEXT_PUBLIC_BASE_PATH=/drawdesk NEXT_PUBLIC_SITE_URL=https://lycemart.github.io/drawdesk pnpm build
 ```
 
 ## Accuracy
 - Rates in `lib/tax-config.ts` with source URLs and `verifiedOn`.
-- `tests/engine.test.ts` covers the published £60,000 example to the penny,
+- `tests/` covers the published £60,000 example to the penny,
   £30k/£50k/£100k reference cases, affordability, pension, year comparison,
   multi-year totals and monotonicity.
 - Not tax advice. England, Wales and Northern Ireland; one director.

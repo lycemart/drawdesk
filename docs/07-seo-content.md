@@ -5,9 +5,9 @@ status: approved
 owner_skill: foundry-growth
 updated: 2026-11-11
 sources:
-  - https://lycemart.github.io/drawdesk/
+  - https://drawdesk.76-13-181-161.sslip.io/
 assumptions:
-  - "Canonical host is the GitHub Pages project URL until drawdesk.co.uk is registered."
+  - "Canonical host is the owner's server. The GitHub Pages build points its canonical at the server."
 ---
 
 # SEO, content and launch — DrawDesk
@@ -17,6 +17,7 @@ assumptions:
 | URL | Intent | Primary term | Title | H1 | JSON-LD |
 |-----|--------|--------------|-------|----|---------|
 | `/` | Use a planner now | salary vs dividend calculator 2026/27 | Director Salary vs Dividend Planner 2026/27 — DrawDesk | What should you draw from your company? | WebApplication, FAQPage, Organization |
+| `/take-home/` | Compare profit levels | director take home pay 2026/27 | Director take-home pay by company profit (2026/27) | Director take-home by company profit | BreadcrumbList |
 | `/methodology/` | Verify the numbers | dividend tax rates 2026/27 | Methodology, rates and sources — DrawDesk | Every number, and where it comes from | Organization |
 
 One intent per page. The home page carries the tool, the answer block, the
@@ -38,7 +39,7 @@ assumptions and citations. They cross-link with descriptive anchors.
 - Unique title (55 chars) and description (158 chars) on each page.
 - Canonical absolute; OG and Twitter cards point at `/og.png` (1200×630).
 - `lang="en-GB"`, `theme-color` teal, viewport meta present.
-- `sitemap.xml` generated with 2 URLs; `robots.txt` allows all and points at it.
+- `sitemap.xml` generated with 3 URLs; `robots.txt` allows all and points at it.
 - `llms.txt` lists the key facts, canonical pages and GOV.UK sources.
 - 404 page returns a real 404 and links back to the planner.
 
@@ -53,16 +54,16 @@ assumptions and citations. They cross-link with descriptive anchors.
 |-------|--------|
 | Lighthouse mobile (local production build) | perf 93, a11y 100, best practices 100, SEO 100 |
 | LCP / CLS / TBT | 1.1 s / 0 / 320 ms |
-| JSON-LD blocks on `/` | 3, all parse |
+| JSON-LD blocks on `/` | 3, all parse; take-home page has BreadcrumbList |
 | `h1` count | 1 per page |
-| Sitemap URLs | 2, both canonical |
+| Sitemap URLs | 3, all canonical |
 | Robots | allows all, sitemap absolute |
 | Internal links | home ↔ methodology, FAQ anchor, no broken local links |
 | Mobile 390 px | no horizontal page overflow (scrollWidth = 390) |
 
 ## Known gaps (follow-ups, not blockers)
-- The custom domain (`drawdesk.co.uk`) is not registered, so canonical/OG use
-  the Pages URL. Switching is a two-variable change plus a DNS record.
+- The host is the server's sslip.io name because no domain/registrar work is
+  allowed. A real domain is a build-variable change plus a DNS record.
 - Initial JS is ~180 KB gzipped, above the 150 KB house budget. Lighthouse
   performance is still 93 and LCP 1.1 s; the follow-up is to move the shell to
   a lighter framework or islands build in v1.1.

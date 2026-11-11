@@ -27,7 +27,6 @@ jobs:
       - run: pnpm build
         env:
           NEXT_PUBLIC_BASE_PATH: /drawdesk
-          NEXT_PUBLIC_SITE_URL: https://lycemart.github.io/drawdesk
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

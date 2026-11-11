@@ -173,6 +173,11 @@ export default function HomePage() {
             Matches the worked example published by two independent UK
             calculators, checked 11 November 2026.
           </p>
+          <p className="note">
+            <a href={withBase("/take-home/")}>
+              See take-home pay at every profit level →
+            </a>
+          </p>
         </div>
       </section>
 
